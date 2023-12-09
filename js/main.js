@@ -32,6 +32,12 @@ var quotes = [
     }
 ];
 
+for (var i = 0; i < quotes.length; i++) {
+    document.getElementById('numberOfQuotes').innerHTML += `
+                                                            <option class="fs-3 text-center" value="${i}">${i + 1}</option>
+                                                            `
+}
+
 var lastNumber;
 
 function getRandomNumber() {
@@ -45,13 +51,6 @@ function getRandomNumber() {
 
     return randomNumber;
 }
-
-for (var i = 0; i < quotes.length; i++) {
-    document.getElementById('numberOfQuotes').innerHTML += `
-                                                            <option class="fs-3 text-center" value="${i}">${i + 1}</option>
-                                                            `
-}
-
 
 function viewQuote() {
     document.getElementById('quote').innerHTML = ``;
