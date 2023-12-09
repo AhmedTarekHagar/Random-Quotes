@@ -10,24 +10,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-info-subtle" onload="viewQuote();">
 
-    <div class="container">
-        <h1>Quote of the day</h1>
-        <p>Press the button below to recieve a random quote!</p>
-        <button type="button">New Quote</button>
+    <div class="container text-center p-5">
+        <h1 class="py-3">Quote of the day</h1>
+        <p class="py-3 fs-2 text-success">Press the button below to recieve a random quote!</p>
 
-        <div class="row">
-            <div class="col-4">
-                <img src="images/1.jpg" class="w-100" alt="">
-            </div>
-            <div class="col-8">
-                <p>"The best revenge is massive success."</p>
-                <p>--Frank Sinatra</p>
+        <label class="form-label fs-3" for="numberOfQuotes">How many Quotes do you want?</label>
+        <select name="quotesRange" id="numberOfQuotes" class="fs-3 form-select">
+
+        </select>
+        <button type="button" onclick="viewQuote();"
+            class="btn btn-outline-primary py-3 px-5 mt-2 mb-3 fs-4 fw-semibold">New Quote</button>
+
+        <div class="container py-3 my-3">
+            <div class="row gy-3 mx-auto border border-2 border-info rounded-3 py-4 align-items-center" id="quote">
+
             </div>
         </div>
 
     </div>
+
+    <footer class="fixed-bottom py-3 bg-dark">
+        <h3 class="fs-4 text-light text-center">Random Quote Generator</h3>
+    </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
